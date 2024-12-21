@@ -46,19 +46,23 @@ def bfs_animation(graph, start_node):
                 if neighbor not in visited and neighbor not in queue:
                     queue.append(neighbor)
 
+    # Add additional frames for a 10-second pause
+    for _ in range(10):  # Assuming 1 second per frame
+        frames.append(frames[-1])  # Duplicate the last frame
+
     return frames
 
 # Generate frames for BFS starting from node 0
 frames = bfs_animation(G, start_node=0)
 
-# Create a GIF with slower speed (2 seconds per frame)
-with imageio.get_writer('bfs_animation.gif', mode='I', duration=5) as writer:
+# Create a GIF with a loop and 10-second pause
+with imageio.get_writer('bfs_animation.gif', mode='I', duration=1) as writer:
     for frame in frames:
         image = imageio.imread(frame)
         writer.append_data(image)
 
 # Cleanup: Remove individual frames
-for frame in frames:
+for frame in frames[:-10]:  # Exclude pause frames
     os.remove(frame)
 
 print("GIF created: bfs_animation.gif")
