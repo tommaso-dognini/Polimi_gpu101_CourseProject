@@ -1,11 +1,19 @@
-# Polimi Passion In Action GPU101 course Project:
+# Polimi Passion In Action GPU101 course Project
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=git,cpp,cmake,python" />
+    <img src="https://img.shields.io/badge/cuda-000000.svg?style=for-the-badge&logo=nVIDIA&logoColor=green" />
+  </a>
+</p>
+
 [Polimi website](https://www.polimi.it/formazione/passion-in-action/dettaglio/gpu-101-2)
 
 ### Assignment:
 Given the sequential C++ version of the well-known BFS algorithm, develop a parallelized solution using CUDA.
 
 ---
-
+# BFS algorithm
 ### What is BFS and How It Works
 
 Breadth-First Search (BFS) is a graph traversal algorithm that explores all vertices of a graph level by level, starting from a given source node. It uses a queue data structure to keep track of the nodes to be explored and ensures that nodes closer to the source are visited before those farther away.
